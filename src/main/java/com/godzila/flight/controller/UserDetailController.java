@@ -20,6 +20,7 @@ public class UserDetailController {
 		return this.userRepository.findAll();
 	}
 	
+	//Get the user details
 	@RequestMapping("/userdetail")
 	public User getUserDetailsById(@RequestParam("id") int id) {
 		System.out.println(this.userRepository.findById(id).get().getUserName());
